@@ -53,6 +53,7 @@ export const App = (): Express.Application => {
       department_name,
       organisation_name,
     };
+
     response.status(OK).json({ query, formatted });
   });
 
