@@ -7,6 +7,7 @@ const NOT_FOUND = 404;
 
 export const App = (): Express.Application => {
   const app = express();
+
   app.use(express.json());
 
   app.get("/", (_, response) => {
