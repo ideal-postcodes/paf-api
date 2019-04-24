@@ -7,7 +7,6 @@
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/paf-api.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/paf-api)
 [![Dependency Status](https://david-dm.org/ideal-postcodes/paf-api.png)](https://david-dm.org/ideal-postcodes/paf-api)
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
-[![Try paf-api on RunKit](https://badge.runkitcdn.com/paf-api.svg)](https://npm.runkit.com/paf-api)
 
 Parses Postcode Address File records into correctly formatted address recognised by Royal Mail according to its Clear Addressing Guidelines.
 
@@ -42,11 +41,11 @@ This API responds to `POST` requests to `/parse` with a JSON payload representin
 POST /parse
 
 {
-  postcode: "WS11 5SB",
-  post_town: "CANNOCK",
-  thoroughfare: "Pye Green Road",
-  building_name: "Flower House 189A",
-  organisation_name: 'S D Alcott Florists',
+  "postcode": "WS11 5SB",
+  "post_town": "CANNOCK",
+  "thoroughfare": "Pye Green Road",
+  "building_name": "Flower House 189A",
+  "organisation_name": "S D Alcott Florists",
 }
 ```
 
@@ -59,7 +58,7 @@ POST /parse
     "post_town": "CANNOCK",
     "thoroughfare": "Pye Green Road",
     "building_name": "Flower House 189A",
-    "organisation_name": 'S D Alcott Florists',
+    "organisation_name": "S D Alcott Florists",
     "building_number": "",
     "sub_building_name": "",
     "dependant_locality": "",
@@ -69,11 +68,11 @@ POST /parse
     "department_name": "",
   },
   "formatted": {
-    "postcode": 'WS11 5SB',
-    "post_town": 'CANNOCK',
-    "line_1": 'S D Alcott Florists',
-    "line_2": 'Flower House',
-    "line_3": '189a Pye Green Road',
+    "postcode": "WS11 5SB",
+    "post_town": "CANNOCK",
+    "line_1": "S D Alcott Florists",
+    "line_2": "Flower House",
+    "line_3": "189a Pye Green Road",
     "premise": "Flower House, 189a"
   }
 }
