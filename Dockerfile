@@ -2,7 +2,7 @@ FROM node:10-alpine
 
 WORKDIR /usr/src/app
 
-ARG PORT=8000
+ARG PORT=8909
 ENV PORT $PORT
 EXPOSE $PORT
 

@@ -106,7 +106,7 @@ Using the docker CLI
 ```
 docker pull ideal-postcoes/paf-api:latest
 
-docker run ideal-postcodes/paf-api 8909:8909
+docker run -p 8909:8909 ideal-postcodes/paf-api
 ```
 
 Alternatively with docker-compose
