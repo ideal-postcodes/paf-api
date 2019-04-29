@@ -9,6 +9,14 @@ const logger = P();
 
 export const app = App({ logger });
 
-http.createServer(app).listen(PORT);
+const server = http.createServer(app).listen(PORT);
+
+process.on("SIGTERM", () => {
+  logger.info("Application terminating");
+  server.close(() => {
+    logger.info("HTTP server closed");
+    process.exit(0);
+  });
+});
 
 logger.info(`Server listening on ${PORT}`);
