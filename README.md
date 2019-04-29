@@ -23,12 +23,22 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 ## Links
 
 - [Github Repository](https://github.com/ideal-postcodes/paf-api)
+- [Test Live on paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 - [UK Clear Addressing Project](https://github.com/ideal-postcodes/uk-clear-addressing)
 - [NPM Package](https://www.npmjs.com/package/paf-api)
 - [More information on Postcode Address File data attributes](https://ideal-postcodes.co.uk/documentation/paf-data)
 - [PAF Programmer's Guide](https://js.ideal-postcodes.co.uk/guide.pdf)
 
 ## Getting Started
+
+Try on [paf-api.ideal-postcodes.co.uk]
+
+```bash
+curl -X POST \
+  http://paf-api.ideal-postcodes.dev/parse \
+  -H 'Content-Type: application/json' \
+  -d '{ "sub_building_name": "Flat 8", "building_name": "Oxford House 110-114", "thoroughfare_name": "High Street" }'
+```
 
 ### HTTP API Usage
 
