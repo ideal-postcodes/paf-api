@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://img.ideal-postcodes.co.uk/UK%20Clear%20Addressing%20Logo@3x.png" alt="PAF API">
+  <img src="https://img.ideal-postcodes.co.uk/PAF%20API%20Logo@3x.png" alt="PAF API">
 </h1>
 
 > HTTP API that parses Postcode Address File records into correctly formatted address lines
@@ -7,6 +7,7 @@
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/paf-api.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/paf-api)
 [![Dependency Status](https://david-dm.org/ideal-postcodes/paf-api.png)](https://david-dm.org/ideal-postcodes/paf-api)
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ideal-postcodes/paf-api)
 
 Parses Postcode Address File records into correctly formatted address recognised by Royal Mail according to its Clear Addressing Guidelines.
 
@@ -14,10 +15,10 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Features
 
-![Correct Addressing](https://img.ideal-postcodes.co.uk/correct_address.gif)
-
 - Exposes [UK Clear Addressing](https://github.com/ideal-postcodes/uk-clear-addressing) as a HTTP service
 - Deployable as a docker container or node.js application
+
+![Correct Addressing](https://img.ideal-postcodes.co.uk/correct_address.gif)
 
 ## Links
 
