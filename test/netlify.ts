@@ -33,7 +33,7 @@ describe("Netlify FAAS", () => {
         handler(event, context, (error, response) => {
           if (error) throw error;
           assert.equal(response.statusCode, OK);
-          assert.deepEqual(response.body, {
+          assert.deepEqual(JSON.parse(response.body), {
             query: addressQuery,
             formatted: {
               line_1: address.line_1,
