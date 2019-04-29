@@ -25,6 +25,13 @@ describe("Application server", () => {
       .expect(OK);
   });
 
+  it("provides readiness probe at /healthz", async () => {
+    const response = await request(app)
+      .get("/healthz")
+      .expect(OK);
+    assert.equal(response.body.status, "UP");
+  });
+
   it("returns 404 on all other routes", async () => {
     const response = await request(app)
       .get("/foo")

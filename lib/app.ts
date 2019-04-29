@@ -23,6 +23,10 @@ export const App = (config: Config): Express.Application => {
     response.status(OK).send("<h1>Ping</h1>");
   });
 
+  app.get("/healthz", (_, response) => {
+    response.status(OK).json({ status: "UP" });
+  });
+
   app.post("/parse", (request, response) => {
     const {
       building_name = "",
