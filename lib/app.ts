@@ -1,7 +1,7 @@
 import e from "express";
 import P from "pino";
 import expressPino from "express-pino-logger";
-import { Address } from "uk-clear-addressing";
+import { parse } from "./parse";
 
 const express = e;
 const OK = 200;
@@ -28,47 +28,7 @@ export const App = (config: Config): Express.Application => {
   });
 
   app.post("/parse", (request, response) => {
-    const {
-      building_name = "",
-      building_number = "",
-      sub_building_name = "",
-      dependant_locality = "",
-      double_dependant_locality = "",
-      thoroughfare = "",
-      dependant_thoroughfare = "",
-      po_box = "",
-      post_town = "",
-      postcode = "",
-      department_name = "",
-      organisation_name = "",
-    } = request.body;
-
-    const address = new Address(request.body);
-    const formatted = {
-      line_1: address.line_1,
-      line_2: address.line_2,
-      line_3: address.line_3,
-      post_town: address.post_town,
-      postcode: address.postcode,
-      premise: address.premise,
-    };
-
-    const query = {
-      building_name,
-      building_number,
-      sub_building_name,
-      dependant_locality,
-      double_dependant_locality,
-      thoroughfare,
-      dependant_thoroughfare,
-      po_box,
-      post_town,
-      postcode,
-      department_name,
-      organisation_name,
-    };
-
-    response.status(OK).json({ query, formatted });
+    response.status(OK).json(parse(request.body));
   });
 
   app.all("/", (_, response) => {
