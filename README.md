@@ -132,7 +132,7 @@ npm start # Traffic served on 8909
 The following environment variables can be passed to the application.
 
 ```bash
-PORT=8909 # Sets the port to listen on
+PORT=8080 # Sets the port to listen on
 ```
 
 ## Licence
