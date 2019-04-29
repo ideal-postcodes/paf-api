@@ -39,7 +39,7 @@ Try on [paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 curl -X POST \
   https://paf-api.ideal-postcodes.dev/parse \
   -H 'Content-Type: application/json' \
-  -d '{ "sub_building_name": "Flat 8", "building_name": "Oxford House 110-114", "thoroughfare_name": "High Street" }'
+  -d '{ "sub_building_name": "Flat 8", "building_name": "Oxford House 110-114", "thoroughfare": "High Street" }'
 ```
 
 ### HTTP API Usage
