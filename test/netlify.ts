@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { handler, Event, Context } from "../lib/netlify/parse";
+import { handler, Event, Context } from "../lib/netlify";
 import { postcodes, addresses } from "@ideal-postcodes/api-fixtures";
 
 const OK = 200;
