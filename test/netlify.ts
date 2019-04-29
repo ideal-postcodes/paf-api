@@ -3,6 +3,7 @@ import { handler, Event, Context } from "../lib/netlify";
 import { postcodes, addresses } from "@ideal-postcodes/api-fixtures";
 
 const OK = 200;
+const BAD_REQUEST = 400;
 const testAddresses = [
   ...postcodes.success.body.result,
   ...addresses.success.body.result.hits,
@@ -47,5 +48,14 @@ describe("Netlify FAAS", () => {
         });
       });
     }
+    it("returns 400 response on malformed payload", () => {
+      const event: Event = { body: "}{" };
+      const context: Context = {};
+
+      handler(event, context, (error, response) => {
+        assert.isNull(error);
+        assert.equal(response.statusCode, BAD_REQUEST);
+      });
+    });
   });
 });
