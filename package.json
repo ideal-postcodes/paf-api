@@ -26,6 +26,8 @@
   ],
   "scripts": {
     "start": "npm run build && node ./dist/index",
+    "netlify": "npm run build && npm run build:readme",
+    "build:readme": "./netlify.sh",
     "test": "npm run lint && NODE_ENV=test node_modules/.bin/nyc node_modules/.bin/mocha",
     "lint": "node_modules/.bin/tslint -c tslint.json -p tsconfig.json lib/**/*.ts",
     "build": "npm run lint && node_modules/.bin/tsc",
@@ -86,6 +88,7 @@
     "@types/supertest": "~2.0.7",
     "chai": "~4.2.0",
     "coveralls": "~3.0.2",
+    "marked": "~0.6.2",
     "mocha": "~6.1.1",
     "npm-check-updates": "~3.1.0",
     "nyc": "~14.0.0",

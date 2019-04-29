@@ -29,7 +29,7 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Getting Started
 
-### Usage
+### HTTP API Usage
 
 This API responds to `POST` requests to `/parse` with a JSON payload representing a PAF Record
 
