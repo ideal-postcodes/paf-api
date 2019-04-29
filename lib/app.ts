@@ -1,13 +1,22 @@
 import e from "express";
+import P from "pino";
+import expressPino from "express-pino-logger";
 import { Address } from "uk-clear-addressing";
 
 const express = e;
 const OK = 200;
 const NOT_FOUND = 404;
 
-export const App = (): Express.Application => {
+interface Config {
+  logger: P.Logger;
+}
+
+export const App = (config: Config): Express.Application => {
+  const { logger } = config;
+
   const app = express();
 
+  app.use(expressPino({ logger }));
   app.use(express.json());
 
   app.get("/", (_, response) => {

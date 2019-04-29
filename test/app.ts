@@ -2,8 +2,14 @@ import request from "supertest";
 import { postcodes, addresses } from "@ideal-postcodes/api-fixtures";
 import { App } from "../lib/app";
 import { assert } from "chai";
+import P from "pino";
+import { resolve } from "path";
 
-const app = App();
+const pino = P;
+const destination = pino.destination(resolve(__dirname, "./test.log"));
+const logger = pino(destination);
+const config = { logger };
+const app = App(config);
 const OK = 200;
 const NOT_FOUND = 404;
 
