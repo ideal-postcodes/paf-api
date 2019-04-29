@@ -107,7 +107,7 @@ Using the docker CLI
 ```
 docker pull ideal-postcoes/paf-api:latest
 
-docker run -p 8909:8909 ideal-postcodes/paf-api
+docker run -p 8080:8080 ideal-postcodes/paf-api
 ```
 
 Alternatively with docker-compose
@@ -125,7 +125,7 @@ Requires node.js 8 or above
 ```bash
 git clone https://github.com/ideal-postcodes/paf-api && cd paf-api && npm install
 
-npm start # Traffic served on 8909
+npm start # Traffic served on 8080
 ```
 
 #### Configuration
