@@ -75,5 +75,21 @@ describe("Application server", () => {
         });
       });
     }
+
+    it("handles empty requests", async () => {
+      const addressQuery = {};
+      const response = await request(app)
+        .post("/parse")
+        .send(addressQuery)
+        .expect(OK);
+      assert.deepEqual(response.body.formatted, {
+        line_1: "",
+        line_2: "",
+        line_3: "",
+        post_town: "",
+        postcode: "",
+        premise: "",
+      });
+    });
   });
 });
