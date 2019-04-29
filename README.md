@@ -37,7 +37,7 @@ Try on [paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 
 ```bash
 curl -X POST \
-  http://paf-api.ideal-postcodes.dev/parse \
+  https://paf-api.ideal-postcodes.dev/parse \
   -H 'Content-Type: application/json' \
   -d '{ "sub_building_name": "Flat 8", "building_name": "Oxford House 110-114", "thoroughfare_name": "High Street" }'
 ```
