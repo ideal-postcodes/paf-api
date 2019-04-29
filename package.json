@@ -2,7 +2,7 @@
   "name": "paf-api",
   "description": "HTTP service that parses Postcode Address File records into a correctly formatted address",
   "version": "0.0.1",
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "types": "dist/index.d.ts",
   "author": {
     "name": "Ideal Postcodes",

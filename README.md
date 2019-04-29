@@ -25,6 +25,7 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 - [Github Repository](https://github.com/ideal-postcodes/paf-api)
 - [Test Live on paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
+- [Docker Hub Image](https://hub.docker.com/r/idealpostcodes/paf-api)
 - [UK Clear Addressing Project](https://github.com/ideal-postcodes/uk-clear-addressing)
 - [NPM Package](https://www.npmjs.com/package/paf-api)
 - [More information on Postcode Address File data attributes](https://ideal-postcodes.co.uk/documentation/paf-data)
@@ -32,7 +33,7 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Getting Started
 
-Try on [paf-api.ideal-postcodes.co.uk](https://paf-api.ideal-postcodes.co.uk)
+Try on [paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 
 ```bash
 curl -X POST \
@@ -137,6 +138,18 @@ Requires node.js 8 or above
 git clone https://github.com/ideal-postcodes/paf-api && cd paf-api && npm install
 
 npm start # Traffic served on 8080
+```
+
+#### NPM Module
+
+The npm module exports an express app factory which takes a `pino` logger
+
+```javascript
+const { App } = require("paf-api");
+
+const app = App({ logger: pino() });
+
+http.createServer(app).listen(PORT);
 ```
 
 #### Configuration
