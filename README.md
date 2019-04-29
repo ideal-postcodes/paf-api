@@ -7,6 +7,7 @@
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/paf-api.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/paf-api)
 [![Dependency Status](https://david-dm.org/ideal-postcodes/paf-api.png)](https://david-dm.org/ideal-postcodes/paf-api)
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ideal-postcodes/paf-api)
 
 Parses Postcode Address File records into correctly formatted address recognised by Royal Mail according to its Clear Addressing Guidelines.
@@ -31,7 +32,7 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Getting Started
 
-Try on [paf-api.ideal-postcodes.co.uk]
+Try on [paf-api.ideal-postcodes.co.uk](https://paf-api.ideal-postcodes.co.uk)
 
 ```bash
 curl -X POST \
