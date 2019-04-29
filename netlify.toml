@@ -1,0 +1,8 @@
+[build]
+  publish = "dist/"
+  command = "npm run build:readme"
+  functions = "dist/"
+[[redirects]]
+  from = "/parse"
+  to = "/.netlify/functions/netlify/parse"
+  status = 200

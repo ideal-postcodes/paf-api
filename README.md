@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://img.ideal-postcodes.co.uk/UK%20Clear%20Addressing%20Logo@3x.png" alt="PAF API">
+  <img src="https://img.ideal-postcodes.co.uk/PAF%20API%20Logo@3x.png" alt="PAF API">
 </h1>
 
 > HTTP API that parses Postcode Address File records into correctly formatted address lines
@@ -8,20 +8,23 @@
 [![Dependency Status](https://david-dm.org/ideal-postcodes/paf-api.png)](https://david-dm.org/ideal-postcodes/paf-api)
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ideal-postcodes/paf-api)
+
 Parses Postcode Address File records into correctly formatted address recognised by Royal Mail according to its Clear Addressing Guidelines.
 
 Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Features
 
-![Correct Addressing](https://img.ideal-postcodes.co.uk/correct_address.gif)
-
 - Exposes [UK Clear Addressing](https://github.com/ideal-postcodes/uk-clear-addressing) as a HTTP service
 - Deployable as a docker container or node.js application
+
+![Correct Addressing](https://img.ideal-postcodes.co.uk/correct_address.gif)
 
 ## Links
 
 - [Github Repository](https://github.com/ideal-postcodes/paf-api)
+- [Test Live on paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 - [UK Clear Addressing Project](https://github.com/ideal-postcodes/uk-clear-addressing)
 - [NPM Package](https://www.npmjs.com/package/paf-api)
 - [More information on Postcode Address File data attributes](https://ideal-postcodes.co.uk/documentation/paf-data)
@@ -29,7 +32,16 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Getting Started
 
-### Usage
+Try on [paf-api.ideal-postcodes.co.uk](https://paf-api.ideal-postcodes.co.uk)
+
+```bash
+curl -X POST \
+  http://paf-api.ideal-postcodes.dev/parse \
+  -H 'Content-Type: application/json' \
+  -d '{ "sub_building_name": "Flat 8", "building_name": "Oxford House 110-114", "thoroughfare_name": "High Street" }'
+```
+
+### HTTP API Usage
 
 This API responds to `POST` requests to `/parse` with a JSON payload representing a PAF Record
 
@@ -106,7 +118,7 @@ Using the docker CLI
 ```
 docker pull ideal-postcoes/paf-api:latest
 
-docker run -p 8909:8909 ideal-postcodes/paf-api
+docker run -p 8080:8080 ideal-postcodes/paf-api
 ```
 
 Alternatively with docker-compose
@@ -124,7 +136,7 @@ Requires node.js 8 or above
 ```bash
 git clone https://github.com/ideal-postcodes/paf-api && cd paf-api && npm install
 
-npm start # Traffic served on 8909
+npm start # Traffic served on 8080
 ```
 
 #### Configuration
@@ -132,7 +144,7 @@ npm start # Traffic served on 8909
 The following environment variables can be passed to the application.
 
 ```bash
-PORT=8909 # Sets the port to listen on
+PORT=8080 # Sets the port to listen on
 ```
 
 ## Licence

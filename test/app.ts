@@ -2,8 +2,14 @@ import request from "supertest";
 import { postcodes, addresses } from "@ideal-postcodes/api-fixtures";
 import { App } from "../lib/app";
 import { assert } from "chai";
+import P from "pino";
+import { resolve } from "path";
 
-const app = App();
+const pino = P;
+const destination = pino.destination(resolve(__dirname, "./test.log"));
+const logger = pino(destination);
+const config = { logger };
+const app = App(config);
 const OK = 200;
 const NOT_FOUND = 404;
 
@@ -17,6 +23,13 @@ describe("Application server", () => {
     const response = await request(app)
       .get("/")
       .expect(OK);
+  });
+
+  it("provides readiness probe at /healthz", async () => {
+    const response = await request(app)
+      .get("/healthz")
+      .expect(OK);
+    assert.equal(response.body.status, "UP");
   });
 
   it("returns 404 on all other routes", async () => {
@@ -62,5 +75,21 @@ describe("Application server", () => {
         });
       });
     }
+
+    it("handles empty requests", async () => {
+      const addressQuery = {};
+      const response = await request(app)
+        .post("/parse")
+        .send(addressQuery)
+        .expect(OK);
+      assert.deepEqual(response.body.formatted, {
+        line_1: "",
+        line_2: "",
+        line_3: "",
+        post_town: "",
+        postcode: "",
+        premise: "",
+      });
+    });
   });
 });
