@@ -1,8 +1,11 @@
 #! /usr/bin/env node
 
 const marked = require("marked");
-const { readFileSync, writeFileSync } = require("fs");
+const { join } = require("path");
+const { readFileSync, writeFileSync, existsSync, mkdirSync } = require("fs");
 
+const path = "dist";
+const file = "index.html";
 const readme = readFileSync("./README.md", { encoding: "utf8" });
 
 const html = `
@@ -36,6 +39,10 @@ const html = `
 </html>
 `;
 
-const outFile = "./dist/index.html";
+const outFile = join(__dirname, path, file);
 
+// Create dist dir if it does not exist
+existsSync(path) || mkdirSync(path);
+
+// Write landing page to file
 writeFileSync(outFile, html, { encoding: "utf8" });
