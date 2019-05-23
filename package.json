@@ -78,7 +78,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@cablanchard/tsconfig": "~0.0.1",
+    "@cablanchard/tsconfig": "~1.0.0",
     "@cablanchard/tslint": "0.0.1",
     "@ideal-postcodes/api-fixtures": "0.0.4",
     "@types/chai": "~4.1.7",
