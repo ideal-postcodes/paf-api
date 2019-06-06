@@ -119,9 +119,9 @@ POST /parse
 Using the docker CLI
 
 ```
-docker pull ideal-postcoes/paf-api:latest
+docker pull idealpostcodes/paf-api:latest
 
-docker run -p 8080:8080 ideal-postcodes/paf-api
+docker run -p 8080:8080 idealpostcodes/paf-api
 ```
 
 Alternatively with docker-compose
