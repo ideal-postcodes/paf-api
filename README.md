@@ -9,6 +9,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
 [![npm version](https://badge.fury.io/js/paf-api.svg)](https://badge.fury.io/js/paf-api)
 [![install size](https://packagephobia.now.sh/badge?p=paf-api)](https://packagephobia.now.sh/result?p=paf-api)
+[![](https://images.microbadger.com/badges/image/idealpostcodes/paf-api.svg)](https://microbadger.com/images/idealpostcodes/paf-api)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ideal-postcodes/paf-api)
 
