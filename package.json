@@ -25,6 +25,7 @@
     "uk"
   ],
   "scripts": {
+    "semantic-release": "node_modules/.bin/semantic-release --no-ci",
     "start": "npm run build && node ./dist/index",
     "netlify": "npm run build && npm run build:readme",
     "build:readme": "./netlify.sh",
@@ -78,6 +79,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@cablanchard/semantic-release": "~1.2.1",
     "@cablanchard/tsconfig": "~1.0.0",
     "@cablanchard/tslint": "0.0.1",
     "@ideal-postcodes/api-fixtures": "0.1.0",
@@ -93,6 +95,7 @@
     "npm-check-updates": "~3.1.0",
     "nyc": "~14.1.0",
     "prettier": "~1.17.0",
+    "semantic-release": "~15.13.12",
     "source-map-support": "~0.5.9",
     "supertest": "~4.0.2",
     "ts-node": "~8.2.0",
@@ -104,5 +107,8 @@
     "express-pino-logger": "~4.0.0",
     "pino": "~5.12.3",
     "uk-clear-addressing": "~2.2.2"
+  },
+  "release": {
+    "extends": "@cablanchard/semantic-release/dist/npm"
   }
 }
