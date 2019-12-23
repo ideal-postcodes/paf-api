@@ -92,7 +92,7 @@
     "coveralls": "~3.0.2",
     "marked": "~0.7.0",
     "mocha": "~6.2.0",
-    "nyc": "~14.1.0",
+    "nyc": "~15.0.0",
     "prettier": "~1.19.1",
     "semantic-release": "~15.13.12",
     "source-map-support": "~0.5.9",
