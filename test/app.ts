@@ -26,7 +26,7 @@ describe("Application server", () => {
   });
 
   it("provides readiness probe at /healthz", async () => {
-    await request(app)
+    const response = await request(app)
       .get("/healthz")
       .expect(OK);
     assert.equal(response.body.status, "UP");
