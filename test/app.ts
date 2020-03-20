@@ -20,7 +20,7 @@ const testAddresses = [
 
 describe("Application server", () => {
   it("returns 200 OK on /", async () => {
-    const response = await request(app)
+    await request(app)
       .get("/")
       .expect(OK);
   });
@@ -33,7 +33,7 @@ describe("Application server", () => {
   });
 
   it("returns 404 on all other routes", async () => {
-    const response = await request(app)
+    await request(app)
       .get("/foo")
       .expect(NOT_FOUND);
   });
