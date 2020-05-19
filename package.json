@@ -89,7 +89,7 @@
     "@types/pino": "~6.0.0",
     "@types/supertest": "~2.0.7",
     "chai": "~4.2.0",
-    "codecov": "~3.6.5",
+    "codecov": "~3.7.0",
     "marked": "~1.1.0",
     "mocha": "~7.1.0",
     "nyc": "~15.0.0",
