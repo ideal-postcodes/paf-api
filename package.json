@@ -104,7 +104,7 @@
   "dependencies": {
     "express": "~4.17.0",
     "express-pino-logger": "~5.0.0",
-    "pino": "~6.2.0",
+    "pino": "~6.3.0",
     "uk-clear-addressing": "~2.2.2"
   },
   "release": {
