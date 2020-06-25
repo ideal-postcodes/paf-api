@@ -34,5 +34,10 @@ jobs:
       - name: Test
         run: npm run test
 
+      - name: Build
+        run: npm run build
+        
       - name: Coverage
         run: npm run coverage
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
