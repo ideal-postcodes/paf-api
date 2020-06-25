@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/ideal-postcodes/paf-api/compare/0.1.0...1.0.0) (2020-06-25)
+
+
+### chore
+
+* **Node:** Drop node 8 support ([994b46f](https://github.com/ideal-postcodes/paf-api/commit/994b46f))
+
+
+### BREAKING CHANGES
+
+* **Node:** Drop support for Node 8
+
 # [0.1.0](https://github.com/ideal-postcodes/paf-api/compare/0.0.1...0.1.0) (2019-06-06)
 
 
