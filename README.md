@@ -4,7 +4,8 @@
 
 > HTTP API that parses Postcode Address File records into correctly formatted address lines
 
-[![CircleCI](https://circleci.com/gh/ideal-postcodes/paf-api.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/paf-api)
+![CI](https://github.com/ideal-postcodes/paf-api/workflows/CI/badge.svg)
+![Release](https://github.com/ideal-postcodes/paf-api/workflows/Release/badge.svg)
 [![Dependency Status](https://david-dm.org/ideal-postcodes/paf-api.png)](https://david-dm.org/ideal-postcodes/paf-api)
 [![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/paf-api/badge.svg?branch=master)](https://coveralls.io/github/ideal-postcodes/paf-api?branch=master)
 [![npm version](https://badge.fury.io/js/paf-api.svg)](https://badge.fury.io/js/paf-api)
