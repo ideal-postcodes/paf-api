@@ -1,7 +1,7 @@
 {
   "name": "paf-api",
   "description": "HTTP service that parses Postcode Address File records into a correctly formatted address",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "dist/app.js",
   "types": "dist/index.d.ts",
   "author": {
