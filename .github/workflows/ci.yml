@@ -27,12 +27,17 @@ jobs:
 
       - name: Install
         run: npm install
-
+        
+      - name: Lint
+        run: npm run lint
+        
       - name: Test
         run: npm run test
 
       - name: Build
-          run: npm run build
-
+        run: npm run build
+        
       - name: Coverage
         run: npm run coverage
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
