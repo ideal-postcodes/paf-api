@@ -93,7 +93,7 @@
     "marked": "~1.1.0",
     "mocha": "~8.1.0",
     "nyc": "~15.1.0",
-    "prettier": "~2.0.1",
+    "prettier": "~2.1.0",
     "semantic-release": "~17.1.0",
     "source-map-support": "~0.5.9",
     "supertest": "~4.0.2",
