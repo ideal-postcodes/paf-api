@@ -90,7 +90,7 @@
     "@types/supertest": "~2.0.7",
     "chai": "~4.2.0",
     "codecov": "~3.7.0",
-    "marked": "~1.1.0",
+    "marked": "~1.2.0",
     "mocha": "~8.1.0",
     "nyc": "~15.1.0",
     "prettier": "~2.1.0",
