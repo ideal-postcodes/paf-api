@@ -27,7 +27,7 @@ Produces consistent address lines, a post town line and a postcode line via HTTP
 
 ## Links
 
-- [Github Repository](https://github.com/ideal-postcodes/paf-api)
+- [GitHub Repository](https://github.com/ideal-postcodes/paf-api)
 - [Test Live on paf-api.ideal-postcodes.dev](https://paf-api.ideal-postcodes.dev)
 - [Docker Hub Image](https://hub.docker.com/r/idealpostcodes/paf-api)
 - [UK Clear Addressing Project](https://github.com/ideal-postcodes/uk-clear-addressing)
@@ -118,7 +118,7 @@ POST /parse
 
 #### Deploy as a docker container
 
-Using the docker CLI
+Using the Docker CLI
 
 ```
 docker pull idealpostcodes/paf-api:latest
@@ -126,7 +126,7 @@ docker pull idealpostcodes/paf-api:latest
 docker run -p 8080:8080 idealpostcodes/paf-api
 ```
 
-Alternatively with docker-compose
+Alternatively with `docker-compose`
 
 ```bash
 git clone https://github.com/ideal-postcodes/paf-api && cd paf-api
@@ -134,9 +134,9 @@ git clone https://github.com/ideal-postcodes/paf-api && cd paf-api
 docker-compose up -d
 ```
 
-#### Deploy as a node.js process
+#### Deploy as a Node.js process
 
-Requires node.js 8 or above
+Requires Node.js 8 or above
 
 ```bash
 git clone https://github.com/ideal-postcodes/paf-api && cd paf-api && npm install
@@ -146,7 +146,7 @@ npm start # Traffic served on 8080
 
 #### NPM Module
 
-The npm module exports an express app factory which takes a `pino` logger
+The npm module exports an Express app factory, which takes a `pino` logger
 
 ```javascript
 const { App } = require("paf-api");
