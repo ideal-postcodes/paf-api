@@ -103,7 +103,7 @@
   },
   "dependencies": {
     "express": "~4.17.0",
-    "express-pino-logger": "~5.0.0",
+    "express-pino-logger": "~6.0.0",
     "pino": "~6.11.0",
     "uk-clear-addressing": "~4.0.0"
   },
